@@ -162,7 +162,7 @@ Transform:
   - {fileID: 7478641867221387446}
   - {fileID: 8224285380004201686}
   - {fileID: 6656405972119608457}
-  - {fileID: 2455446072391877401}
+  - {fileID: 4687678986812899412}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4123399746264987195
@@ -604,9 +604,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5843722413629807253}
     m_Modifications:
+    - target: {fileID: 483692406186113071, guid: d75b9ed70a1469940bc96ef84d07c9e4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 483692406186113071, guid: d75b9ed70a1469940bc96ef84d07c9e4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.46
+      objectReference: {fileID: 0}
     - target: {fileID: 4620672275223756848, guid: d75b9ed70a1469940bc96ef84d07c9e4, type: 3}
       propertyPath: m_Name
       value: Point Light
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384797300250354423, guid: d75b9ed70a1469940bc96ef84d07c9e4, type: 3}
+      propertyPath: m_Intensity
+      value: 1.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 6384797300250354423, guid: d75b9ed70a1469940bc96ef84d07c9e4, type: 3}
+      propertyPath: m_BounceIntensity
+      value: 2.98
       objectReference: {fileID: 0}
     - target: {fileID: 7325368318133992290, guid: d75b9ed70a1469940bc96ef84d07c9e4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -653,9 +669,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d75b9ed70a1469940bc96ef84d07c9e4, type: 3}
---- !u!4 &2455446072391877401 stripped
+--- !u!4 &4687678986812899412 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7325368318133992290, guid: d75b9ed70a1469940bc96ef84d07c9e4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 483692406186113071, guid: d75b9ed70a1469940bc96ef84d07c9e4, type: 3}
   m_PrefabInstance: {fileID: 5168884005571737723}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5587225157032012024
@@ -666,6 +682,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5843722413629807253}
     m_Modifications:
+    - target: {fileID: 1239857956724173737, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2312304150825862299, guid: 2506c32f90ed869409734d062d07c67e, type: 3}
+    - target: {fileID: 1239857956724173737, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0fedd85d48d6919449437cfafe1db151, type: 2}
     - target: {fileID: 6377417671358724030, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0
@@ -710,6 +734,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rick's Weird Space Pod
       objectReference: {fileID: 0}
+    - target: {fileID: 9113961483072506109, guid: cf91000b018c5e64d87fba48f5ab81b9, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: -6141262742250102974, guid: aa840126f37030e459305ecd09c6f48f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

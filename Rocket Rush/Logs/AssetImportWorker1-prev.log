@@ -15,7 +15,7 @@ C:/Users/abhishek/Desktop/Unity Projects/Rocket Rush
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-50547
+51673
 -job-worker-count
 3
 -background-job-worker-count
@@ -59,12 +59,12 @@ C:/Users/abhishek/Desktop/Unity Projects/Rocket Rush
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [7348]  Target information:
+Player connection [5912]  Target information:
 
-Player connection [7348]  * "[IP] 192.168.1.37 [Port] 0 [Flags] 2 [Guid] 683469382 [EditorId] 683469382 [Version] 1048832 [Id] WindowsEditor(7,acerAspire7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [5912]  * "[IP] 192.168.1.37 [Port] 0 [Flags] 2 [Guid] 3014087025 [EditorId] 3014087025 [Version] 1048832 [Id] WindowsEditor(7,acerAspire7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [7348] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [7348] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [5912] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [5912] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 3
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,7 +76,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 7.08 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 352.66 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.38f1 (82314a941f2d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Resources/UnitySubsystems
@@ -92,47 +92,47 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56536
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56232
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.38f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.009638 seconds.
-- Loaded All Assemblies, in  1.283 seconds
+Registered in 1.351075 seconds.
+- Loaded All Assemblies, in 33.208 seconds
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.174 seconds
-Domain Reload Profiling: 2453ms
-	BeginReloadAssembly (411ms)
+- Finished resetting the current domain, in  1.251 seconds
+Domain Reload Profiling: 34454ms
+	BeginReloadAssembly (25650ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (2ms)
-	RebuildCommonClasses (136ms)
-	RebuildNativeTypeToScriptingClass (44ms)
-	initialDomainReloadingComplete (154ms)
-	LoadAllAssembliesAndSetupDomain (534ms)
-		LoadAssemblies (403ms)
+	RebuildCommonClasses (1641ms)
+	RebuildNativeTypeToScriptingClass (35ms)
+	initialDomainReloadingComplete (1505ms)
+	LoadAllAssembliesAndSetupDomain (4371ms)
+		LoadAssemblies (25634ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (523ms)
-			TypeCache.Refresh (520ms)
-				TypeCache.ScanAssembly (478ms)
+		AnalyzeDomain (4361ms)
+			TypeCache.Refresh (4356ms)
+				TypeCache.ScanAssembly (3341ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (1175ms)
+	FinalizeReload (1253ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1015ms)
+		SetupLoadedEditorAssemblies (1102ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (85ms)
-			SetLoadedEditorAssemblies (15ms)
-			BeforeProcessingInitializeOnLoad (171ms)
-			ProcessInitializeOnLoadAttributes (543ms)
-			ProcessInitializeOnLoadMethodAttributes (200ms)
+			InitializePlatformSupportModulesInManaged (93ms)
+			SetLoadedEditorAssemblies (14ms)
+			BeforeProcessingInitializeOnLoad (180ms)
+			ProcessInitializeOnLoadAttributes (585ms)
+			ProcessInitializeOnLoadMethodAttributes (229ms)
 			AfterProcessingInitializeOnLoad (0ms)
-			EditorAssembliesLoaded (1ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
@@ -142,11 +142,11 @@ Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  2.644 seconds
+- Loaded All Assemblies, in 27.615 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 5.69 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.61 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
@@ -155,60 +155,348 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.752 seconds
-Domain Reload Profiling: 5389ms
-	BeginReloadAssembly (660ms)
+- Finished resetting the current domain, in  4.848 seconds
+Domain Reload Profiling: 32451ms
+	BeginReloadAssembly (594ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (21ms)
+		DisableScriptedObjects (26ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (105ms)
-	RebuildCommonClasses (140ms)
-	RebuildNativeTypeToScriptingClass (42ms)
-	initialDomainReloadingComplete (126ms)
-	LoadAllAssembliesAndSetupDomain (1667ms)
-		LoadAssemblies (1226ms)
+		CreateAndSetChildDomain (112ms)
+	RebuildCommonClasses (127ms)
+	RebuildNativeTypeToScriptingClass (35ms)
+	initialDomainReloadingComplete (128ms)
+	LoadAllAssembliesAndSetupDomain (26719ms)
+		LoadAssemblies (24805ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (854ms)
-			TypeCache.Refresh (617ms)
-				TypeCache.ScanAssembly (565ms)
-			BuildScriptInfoCaches (164ms)
-			ResolveRequiredComponents (65ms)
-	FinalizeReload (2754ms)
+		AnalyzeDomain (2261ms)
+			TypeCache.Refresh (2083ms)
+				TypeCache.ScanAssembly (1913ms)
+			BuildScriptInfoCaches (139ms)
+			ResolveRequiredComponents (30ms)
+	FinalizeReload (4849ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (2106ms)
+		SetupLoadedEditorAssemblies (3013ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (10ms)
-			SetLoadedEditorAssemblies (14ms)
-			BeforeProcessingInitializeOnLoad (366ms)
-			ProcessInitializeOnLoadAttributes (1340ms)
-			ProcessInitializeOnLoadMethodAttributes (365ms)
-			AfterProcessingInitializeOnLoad (9ms)
+			InitializePlatformSupportModulesInManaged (11ms)
+			SetLoadedEditorAssemblies (12ms)
+			BeforeProcessingInitializeOnLoad (311ms)
+			ProcessInitializeOnLoadAttributes (1146ms)
+			ProcessInitializeOnLoadMethodAttributes (1515ms)
+			AfterProcessingInitializeOnLoad (17ms)
 			EditorAssembliesLoaded (1ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (17ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 5.87 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 3.47 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 200 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 6357 unused Assets / (7.1 MB). Loaded Objects now: 6995.
-Memory consumption went from 155.1 MB to 148.1 MB.
-Total: 49.836200 ms (FindLiveObjects: 3.727200 ms CreateObjectMapping: 5.876900 ms MarkObjects: 21.313900 ms  DeleteObjects: 18.912800 ms)
+Memory consumption went from 155.4 MB to 148.3 MB.
+Total: 36.436500 ms (FindLiveObjects: 2.181600 ms CreateObjectMapping: 3.273600 ms MarkObjects: 17.210600 ms  DeleteObjects: 13.765900 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 3367.473191 seconds.
-  path: Assets/Prefabs/luminous Cube.prefab
-  artifactKey: Guid(f509d062d17604344ade817a3b4ea9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/luminous Cube.prefab using Guid(f509d062d17604344ade817a3b4ea9d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fadbf2d699b27ef2ac22a8a132743dca') in 2.5176916 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 15
+  Time since last request: 53903.090666 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c355e38b697f8fcf61785dd9c172746e') in 1.6394478 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 32
 
 ========================================================================
 Received Import Request.
-  Time since last request: 134.515605 seconds.
+  Time since last request: 0.000099 seconds.
+  path: Assets/Prefabs/Environment.prefab
+  artifactKey: Guid(f5c58c1448fe4e64fa11ba7b6673c82d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Environment.prefab using Guid(f5c58c1448fe4e64fa11ba7b6673c82d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4c6a3b072383690dcc88b7cd94734518') in 0.1498556 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 587
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.748315 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17a31997c7137f6d82312a2b5b4a7366') in 0.066429 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '898c8bff3e39efe19e220053118c2e3a') in 0.0372289 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.882136 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '48aec84482ba22088a0481ae273e5c0d') in 0.0583773 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e8d0d51686f8bd66bd4fcee55bc1147d') in 0.0295828 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.476144 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f42792ef32bfcd7001d90c89dfe4a61c') in 0.0557211 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '780139c6249a5c273bc2ee4462ea96b6') in 0.0256183 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.860215 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9461aa3695b44b49f20434cef63a07a2') in 0.0547023 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000123 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '70ce2dc6a71123586c07079636e4d5c4') in 0.0340557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.571348 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '06c4898307fdbaad77d19cfca2c2aa17') in 0.0558741 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6a563ad87dd732007a4aa3aac963c9db') in 0.0264749 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.399986 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dc139e833b23c38b0cd2a8388fbb70ea') in 0.0528058 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000089 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f4dbd0271f365a75a7a0d7e261b710fa') in 0.0248032 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.593039 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e720cdc1aeb776e0559c475f458e4258') in 0.0558711 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000108 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bae120f99fad29098f49bc6fa361a779') in 0.0322909 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.075491 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f956fd43b6bb987ff8bdcfde67ee061b') in 0.0619513 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '95dfb06f7c684d47a19ecf1f77a98eb1') in 0.0241502 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.247813 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8eccf523f2388899574824fe3044edfa') in 0.0514846 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000090 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ac06579f1ff8cfa7373249972cc836ea') in 0.0268189 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.305568 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7b95fa265bbe424ab0e4791716e893c4') in 0.0578033 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd3d94f24f42e44e97edfbcdecf575bd9') in 0.03687 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.762153 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a1918a66f3abd656feb1f7b91bda2eea') in 0.0536775 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000081 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9ed88bd5131e8a6915f14c62e213b7ac') in 0.0245841 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.077605 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ea0a8aa960f6258efa91407afc06078a') in 0.0490299 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000095 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1ad4c9c1474e3d5b9486c391254a7c27') in 0.028802 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.355899 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd1e6a8e2a0440f43b462b38973efc0e3') in 0.0799259 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000097 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cac4297a817b4151d69d1bc8630a26a8') in 0.032612 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.848178 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2966fdf7a01f2b7e34a9034dffb0dad4') in 0.0516268 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000076 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '475843a3b5b0ee711d55040417082dd2') in 0.0538823 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.640071 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bfb0369be549b96bee3c6a8fa83bc7f1') in 0.0499717 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dc6249eaa3b4abc3be206cdf4c861e5b') in 0.02983 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.770658 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '620e3932cd02d07fef90a9985262da3a') in 0.0499334 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c2149d248dca29855d7a76bafa49d478') in 0.0278344 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.439707 seconds.
+  path: Assets/Prefabs/Landing pad platform.prefab
+  artifactKey: Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Landing pad platform.prefab using Guid(be5fb3b6cc80e804fbedee12f046fff9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2237039b51bf6cc1f3364147ed8f5fd8') in 0.0652359 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 104
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000088 seconds.
+  path: Assets/Prefabs/landing pad Variant.prefab
+  artifactKey: Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/landing pad Variant.prefab using Guid(3f13265a88dfa0d4b8c29436090ce722) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '22c790c864b6b4525e8acc8980f71436') in 0.0282374 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Import Request.
+  Time since last request: 1050.860595 seconds.
   path: Assets/Prefabs/Player rocket.prefab
   artifactKey: Guid(db3ec1f6443b80a4da18c28ddba07dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Player rocket.prefab using Guid(db3ec1f6443b80a4da18c28ddba07dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '932a7f6bde212a675a1196af5d194217') in 0.0849304 seconds
+Start importing Assets/Prefabs/Player rocket.prefab using Guid(db3ec1f6443b80a4da18c28ddba07dd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bfb23ca5dd17af05c9307e72603d9a90') in 0.161031 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 228
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.678460 seconds.
+  path: Assets/Scenes/Over/ReflectionProbe-0.exr
+  artifactKey: Guid(87f5a72065a00a1489128d9b1dcca3e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Over/ReflectionProbe-0.exr using Guid(87f5a72065a00a1489128d9b1dcca3e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e85cd9da50bc1d9087e1a2759a8b2006') in 0.0751054 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 

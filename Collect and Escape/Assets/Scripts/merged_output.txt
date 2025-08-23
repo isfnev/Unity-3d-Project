@@ -1,0 +1,446 @@
+===== START OF FILE: CameraFollow.cs =====
+using UnityEngine;
+
+public class CameraFollow2_5D : MonoBehaviour
+{
+    public Transform player;
+    public Vector3 offset;
+    public float smoothSpeed = 0.125f;
+    private Vector3 targetPosition, smoothPosition;
+
+    void LateUpdate()
+    {
+        Vector3 targetPosition = player.position + offset;
+
+        Vector3 smoothPosition = Vector3.Lerp(transform.position, targetPosition, smoothSpeed);
+
+        transform.position = smoothPosition;
+
+        transform.LookAt(player);
+    }
+}
+
+
+===== END OF FILE: CameraFollow.cs =====
+
+===== START OF FILE: CollectVFX.cs =====
+using UnityEngine;
+
+public class CollectVFX : MonoBehaviour
+{
+    private float lifetime = 0.5f;
+    private Vector3 targetScale = new Vector3(1, 1, 1);
+
+    void Update()
+    {
+        transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * 10);
+        lifetime -= Time.deltaTime;
+        if (lifetime <= 0f)
+        {
+            Destroy(gameObject);
+        }
+    }
+}
+
+===== END OF FILE: CollectVFX.cs =====
+
+===== START OF FILE: DoorController.cs =====
+using UnityEngine;
+
+public class DoorController : MonoBehaviour
+{
+    public float openSpeed = 1f;
+    public float openHeight = 3f;
+    public AudioClip doorOpenSound;
+
+    private Vector3 closedPosition;
+    private Vector3 openPosition;
+    private bool isOpening = false;
+    private AudioSource audioSource;
+
+    void Start()
+    {
+        closedPosition = transform.position;
+        openPosition = closedPosition + Vector3.up * openHeight;
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.playOnAwake = false;
+    }
+
+    void Update()
+    {
+        if (isOpening)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, openPosition, openSpeed * Time.deltaTime);
+
+            if (Vector3.Distance(transform.position, openPosition) < 0.01f)
+            {
+                isOpening = false;
+            }
+        }
+    }
+
+    public void UnlockDoor()
+    {
+        if (!isOpening)
+        {
+            isOpening = true;
+
+            if (doorOpenSound != null)
+            {
+                audioSource.PlayOneShot(doorOpenSound);
+            }
+        }
+    }
+}
+
+===== END OF FILE: DoorController.cs =====
+
+===== START OF FILE: EndTrigger.cs =====
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class EndTrigger : MonoBehaviour
+{
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GameManager.Instance.FinishLevel();
+            SceneManager.LoadScene("Results");
+        }
+    }
+}
+
+===== END OF FILE: EndTrigger.cs =====
+
+===== START OF FILE: GameManager.cs =====
+using UnityEngine;
+using TMPro;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance;
+
+    private int totalCollectables;
+    private int collected = 0, minutes, seconds;
+
+    public DoorController door;
+
+    public TextMeshProUGUI collectableText;
+    public TextMeshProUGUI timerText;
+
+    private float timer = 0f;
+    private bool isPaused = false;
+
+    void Awake()
+    {
+        Instance = this;
+    }
+
+    void Start()
+    {
+        totalCollectables = GameObject.FindGameObjectsWithTag("Collectable").Length;
+        UpdateCollectableUI();
+    }
+
+    void Update()
+    {
+        if (!isPaused)
+        {
+            timer += Time.deltaTime;
+            UpdateTimerUI();
+        }
+    }
+
+    public void Collect()
+    {
+        collected++;
+
+        UpdateCollectableUI();
+
+        if (collected >= totalCollectables)
+        {
+            door.UnlockDoor();
+        }
+    }
+
+    private void UpdateCollectableUI()
+    {
+        collectableText.text = collected + " / " + totalCollectables;
+    }
+
+    private void UpdateTimerUI()
+    {
+        if (timerText != null)
+        {
+            minutes = Mathf.FloorToInt(timer / 60);
+            seconds = Mathf.FloorToInt(timer % 60);
+            timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+        }
+    }
+
+    public void PauseGame(bool pause)
+    {
+        isPaused = pause;
+        Time.timeScale = pause ? 0 : 1;
+    }
+
+    public void FinishLevel()
+    {
+        SceneFlowManager.LastRunTime = timer;
+    }
+}
+
+===== END OF FILE: GameManager.cs =====
+
+===== START OF FILE: PauseMenu.cs =====
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class PauseMenu : MonoBehaviour
+{
+    public GameObject pauseMenuPanel;
+    private bool isPaused = false;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused) Resume();
+            else Pause();
+        }
+    }
+
+    public void Resume()
+    {
+        pauseMenuPanel.SetActive(false);
+        Time.timeScale = 1f;
+        isPaused = false;
+    }
+
+    void Pause()
+    {
+        pauseMenuPanel.SetActive(true);
+        Time.timeScale = 0f;
+        isPaused = true;
+    }
+
+    public void LoadMainMenu()
+    {
+        Time.timeScale = 1f; // reset time
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quit pressed (works in build, not in editor)");
+    }
+}
+
+===== END OF FILE: PauseMenu.cs =====
+
+===== START OF FILE: PlayerCollect.cs =====
+using UnityEngine;
+
+public class PlayerCollect : MonoBehaviour
+{
+    public AudioClip collectSound;
+    public GameObject collectVFX;
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GameManager.Instance.Collect();
+
+            if (collectSound != null)
+            {
+                AudioSource.PlayClipAtPoint(collectSound, transform.position, 1f);
+            }
+
+            if (collectVFX != null)
+            {
+                Instantiate(collectVFX, transform.position, Quaternion.identity);
+            }
+
+            Destroy(gameObject, collectSound.length);
+        }
+    }
+}
+
+===== END OF FILE: PlayerCollect.cs =====
+
+===== START OF FILE: PlayerController.cs =====
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+    public float acceleration = 10f;
+    public float deceleration = 10f;
+    public float rotationSpeed = 10f;
+
+    private Vector3 moveInput, targetVelocity;
+    private Vector3 moveVelocity;
+    private float x, z;
+    private Rigidbody rb;
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+    }
+
+    void Update()
+    {
+        x = Input.GetAxisRaw("Horizontal");
+        z = Input.GetAxisRaw("Vertical");
+
+        moveInput = new Vector3(x, 0f, z);
+    }
+
+    void FixedUpdate()
+    {
+        targetVelocity = moveSpeed * moveInput;
+        moveVelocity = Vector3.Lerp(moveVelocity, targetVelocity, (moveInput.magnitude > 0 ? acceleration : deceleration) * Time.fixedDeltaTime);
+
+        rb.linearVelocity = new Vector3(moveVelocity.x, rb.linearVelocity.y, moveVelocity.z);
+    }
+}
+
+===== END OF FILE: PlayerController.cs =====
+
+===== START OF FILE: ResultsUI.cs =====
+using UnityEngine;
+using TMPro;
+
+public class ResultsUI : MonoBehaviour
+{
+    public TextMeshProUGUI currentTimeText;
+    public TextMeshProUGUI bestTimeText;
+
+    private void Start()
+    {
+        float lastRun = SceneFlowManager.LastRunTime;
+
+        float bestTime = PlayerPrefs.GetFloat("BestTime", float.MaxValue);
+
+        if (lastRun < bestTime)
+        {
+            bestTime = lastRun;
+            PlayerPrefs.SetFloat("BestTime", bestTime);
+            PlayerPrefs.Save();
+        }
+
+        currentTimeText.text = "Your Time: " + FormatTime(lastRun);
+        bestTimeText.text = "Best Time: " + (bestTime == float.MaxValue ? "N/A" : FormatTime(bestTime));
+    }
+
+    private string FormatTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60);
+        int seconds = Mathf.FloorToInt(time % 60);
+        int milliseconds = Mathf.FloorToInt((time * 1000) % 1000);
+        return $"{minutes:00}:{seconds:00}.{milliseconds:000}";
+    }
+}
+
+===== END OF FILE: ResultsUI.cs =====
+
+===== START OF FILE: SceneFlowManager.cs =====
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class SceneFlowManager : MonoBehaviour
+{
+    public static float LastRunTime;
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("Game");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+        Debug.Log("Quit pressed (works in build, not in editor)");
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void LoadResults()
+    {
+        SceneManager.LoadScene("Results");
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("Game");
+    }
+}
+
+===== END OF FILE: SceneFlowManager.cs =====
+
+===== START OF FILE: SettingScript.cs =====
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class MenuManager : MonoBehaviour
+{
+    public GameObject menuPanel;
+    public GameObject settingsPanel;
+    public Slider volumeSlider;
+    public TMP_Dropdown graphicsDropdown;
+
+    private void Start()
+    {
+        volumeSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
+        ApplyVolume(volumeSlider.value);
+        volumeSlider.onValueChanged.AddListener(ApplyVolume);
+
+        graphicsDropdown.ClearOptions();
+        graphicsDropdown.AddOptions(new System.Collections.Generic.List<string>(QualitySettings.names));
+
+        int savedQuality = PlayerPrefs.GetInt("GraphicsQuality", QualitySettings.GetQualityLevel());
+        graphicsDropdown.value = savedQuality;
+        ApplyGraphics(savedQuality);
+
+        graphicsDropdown.onValueChanged.AddListener(ApplyGraphics);
+    }
+
+    public void OpenSettings()
+    {
+        menuPanel.SetActive(false);
+        settingsPanel.SetActive(true);
+    }
+
+    public void CloseSettings()
+    {
+        settingsPanel.SetActive(false);
+        menuPanel.SetActive(true);
+    }
+
+    private void ApplyVolume(float value)
+    {
+        AudioListener.volume = value;
+        PlayerPrefs.SetFloat("MasterVolume", value);
+    }
+
+    private void ApplyGraphics(int index)
+    {
+        QualitySettings.SetQualityLevel(index, true);
+        PlayerPrefs.SetInt("GraphicsQuality", index);
+    }
+}
+
+===== END OF FILE: SettingScript.cs =====
+
